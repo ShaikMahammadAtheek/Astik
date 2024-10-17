@@ -15,7 +15,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^5.0.0",
     "resolve-url-loader": "^5.0.0",
     "web-vitals": "^2.1.4"
   },
@@ -42,12 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/plugin-transform-class-properties": "^7.25.4",
-    "@babel/plugin-transform-nullish-coalescing-operator": "^7.24.7",
-    "@babel/plugin-transform-numeric-separator": "^7.24.7",
-    "@babel/plugin-transform-optional-chaining": "^7.24.8",
-    "@babel/plugin-transform-private-methods": "^7.25.4"
   }
 }
