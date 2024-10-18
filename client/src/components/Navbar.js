@@ -283,7 +283,7 @@ const Navbar = () => {
   // Fetch cities when the dropdown is opened
   useEffect(() => {
     if (isDropdownOpen) {
-      axios.get('http://localhost:5000/api/cities')
+      axios.get('astik-production.up.railway.app/api/cities')
         .then(response => {
           const cleanCities = [...new Set(response.data.map(city => city.trim()))].sort();
           setDropdownCities(cleanCities);
