@@ -23,12 +23,8 @@ const Home = () => {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-<<<<<<< HEAD
         // Update the API URL to use the hosted Railway URL
         axios.get('https://astik-production.up.railway.app/api/home') // Fetch sorted jobs
-=======
-        axios.get('astik-production.up.railway.app/api/home') // Fetch sorted jobs
->>>>>>> a2b12aa3486ccc77de9e3689f444b248dd3c517c
             .then((response) => {
                 setJobs(response.data); // Set the jobs in state
             })

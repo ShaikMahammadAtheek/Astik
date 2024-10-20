@@ -51,11 +51,7 @@ const JobByCity = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-<<<<<<< HEAD
     axios.get(`https://astik-production.up.railway.app/api/job-by-city/${city}`)
-=======
-    axios.get(`astik-production.up.railway.app/api/job-by-city/${city}`)
->>>>>>> a2b12aa3486ccc77de9e3689f444b248dd3c517c
       .then(response => setJobs(response.data))
       .catch(error => console.error('Error fetching jobs:', error));
   }, [city]);
