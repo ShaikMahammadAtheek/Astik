@@ -7,7 +7,11 @@ const Freshers = () => {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
+<<<<<<< HEAD
     axios.get('https://astik-production.up.railway.app/api/freshers')  // Make sure the API URL is correct
+=======
+    axios.get('astik-production.up.railway.app/api/freshers')  // Make sure the API URL is correct
+>>>>>>> a2b12aa3486ccc77de9e3689f444b248dd3c517c
       .then((response) => {
         setJobs(response.data);  // Update jobs with response data
       })

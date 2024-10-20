@@ -25,7 +25,11 @@ const Support = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+<<<<<<< HEAD
       const response = await axios.post('https://astik-production.up.railway.app/api/feedback', feedback);
+=======
+      const response = await axios.post('astik-production.up.railway.app/api/feedback', feedback);
+>>>>>>> a2b12aa3486ccc77de9e3689f444b248dd3c517c
       if (response.data.success) {
         setStatus('Feedback submitted successfully!');
             // Hide the message after 5 seconds
