@@ -19,12 +19,12 @@ import '../styles/Home.css';
 import './Home.css';
 import { Link } from 'react-router-dom';
 
-
 const Home = () => {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/home') // Fetch sorted jobs
+        // Update the API URL to use the hosted Railway URL
+        axios.get('https://astik-production.up.railway.app/api/home') // Fetch sorted jobs
             .then((response) => {
                 setJobs(response.data); // Set the jobs in state
             })
@@ -45,7 +45,6 @@ const Home = () => {
                 </div>
             </section>
 
-
             <section className="top-components">
                 <h2 style={{ backgroundColor: 'lightgray' }}>Top Components This Week</h2>
                 <div className="top-card-grid jobss">
@@ -58,10 +57,9 @@ const Home = () => {
                                 {job.imageUrl && <img src={job.imageUrl} alt={job.title} className="job-card-image" />}
                                 <h1>{job.title}</h1>
                                 <p>{job.description}</p>
-                                {/*<p>{job.company}</p>*/}
                                 <p>{job.location}</p>
                                 <h1>{job.walkInDate && <p className="card-date">{new Date(job.walkInDate).toLocaleDateString()}</p>}</h1>
-                                <Link to={`/job/${job._id}`} className="card-link">View Details </Link>
+                                <Link to={`/job/${job._id}`} className="card-link">View Details</Link>
                             </div>
                         ))}
                 </div>
@@ -73,6 +71,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
